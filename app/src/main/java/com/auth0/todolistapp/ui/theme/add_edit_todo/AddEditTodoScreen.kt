@@ -20,7 +20,7 @@ import com.auth0.todolistapp.ui.theme.todo_list.rememberScaffoldState
 import com.auth0.todolistapp.util.UiEvent
 
 
-private val Unit.snackbarHostState: Any
+private val Any.snackbarHostState: Any
     get() {
         return 1
     }
