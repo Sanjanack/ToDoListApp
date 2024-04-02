@@ -2,14 +2,14 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
-    id ("dagger.hilt.android.plugin")
+//    id ("dagger.hilt.android.plugin")
 }
 // Apply Dagger Hilt plugin via classpath
 //classpath("com.google.dagger:hilt-android-gradle-plugin:2.39.1")
 
-repositories {
-    gradlePluginPortal() // Add Gradle plugin portal repository
-}
+//repositories {
+//    gradlePluginPortal() // Add Gradle plugin portal repository
+//}
 
 android {
     namespace = "com.auth0.todolistapp"
@@ -92,7 +92,7 @@ dependencies {
 
     // Room
     implementation ("androidx.room:room-runtime:2.6.1")
-    kapt ("androidx.room:room-compiler:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
     // Kotlin Extensions and Coroutines support for Room
     implementation ("androidx.room:room-ktx:2.6.1")

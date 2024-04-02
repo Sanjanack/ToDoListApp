@@ -6,7 +6,6 @@ import com.auth0.todolistapp.data.Todo
 import com.auth0.todolistapp.data.TodoRepository
 import com.auth0.todolistapp.util.Routes
 import com.auth0.todolistapp.util.UiEvent
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -78,3 +77,5 @@ class TodoListViewModel @Inject constructor(
         }
     }
 }
+
+annotation class HiltViewModel

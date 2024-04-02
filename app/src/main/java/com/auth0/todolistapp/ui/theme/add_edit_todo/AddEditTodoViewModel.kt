@@ -9,7 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.auth0.todolistapp.data.Todo
 import com.auth0.todolistapp.data.TodoRepository
 import com.auth0.todolistapp.util.UiEvent
-import dagger.hilt.android.lifecycle.HiltViewModel
+//import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -49,10 +49,10 @@ class AddEditTodoViewModel @Inject constructor(
     fun onEvent(event: AddEditTodoEvent) {
         when(event) {
             is AddEditTodoEvent.OnTitleChange -> {
-                title = event.title
+                title = event.title.toString()
             }
             is AddEditTodoEvent.OnDescriptionChange -> {
-                description = event.description
+                description = event.description.toString()
             }
             is AddEditTodoEvent.OnSaveTodoClick -> {
                 viewModelScope.launch {
@@ -82,3 +82,5 @@ class AddEditTodoViewModel @Inject constructor(
         }
     }
 }
+
+annotation class HiltViewModel
